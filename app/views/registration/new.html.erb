@@ -1,0 +1,22 @@
+<div class="max-w-md w-full mx-auto h-full">
+  <h1 class="font-bold text-4xl text-purple-400">Create Account</h1>
+
+  <div class="py-6">
+    <%= form_with url: authentication_path do |f| %>
+      <div class="w-full flex flex-col">
+        <%= f.label :username, class: "text-gray-200" %>
+        <%= f.text_field :username %>
+        <%= f.label :email, class: "text-gray-200 mt-6" %>
+        <%= f.text_field :email %>
+        <%= f.label :password, class: "text-gray-200 mt-6" %>
+        <%= f.password_field :password %>
+        <%= f.submit "Create account", class: "text-green-100 bg-green-500 hover:bg-green-600 hover:text-green-200 transition-all duration-250 cursor-pointer py-3 mt-6" %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="w-full grid gap-y-4">
+    <%= link_to "Sign up with wavclouds", "#", class: "bg-indigo-500 hover:bg-indigo-600 text-indigo-50 hover:text-indigo-200 w-full py-3 text-center" %>
+    <%= link_to "Sign in", new_authentication_path, class: "text-gray-200" %>
+  </div>
+</div>

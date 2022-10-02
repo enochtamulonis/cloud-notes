@@ -1,0 +1,9 @@
+Rails.application.routes.draw do
+  resource :authentication, only: [:new, :create], controller: :authentication
+  resource :registration, only: [:new, :create], controller: :registration
+  get 'home/index'
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+
+  # Defines the root path route ("/")
+  root "home#index"
+end
